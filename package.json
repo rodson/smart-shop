@@ -1,0 +1,25 @@
+{
+  "name": "smart-shop",
+  "version": "1.0.0",
+  "description": "基于腾讯云人脸识别的智慧零售服务小demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodson/smart-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodson/smart-shop/issues"
+  },
+  "homepage": "https://github.com/rodson/smart-shop#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "tencentcloud-sdk-nodejs": "^3.0.105"
+  }
+}
