@@ -4,7 +4,8 @@
   "description": "基于腾讯云人脸识别的智慧零售服务小demo",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha ./test --timeout 10000 --reporter mochawesome --exit"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
     "koa": "^2.11.0",
     "koa-router": "^7.4.0",
     "tencentcloud-sdk-nodejs": "^3.0.105"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "mochawesome": "^4.1.0"
   }
 }
