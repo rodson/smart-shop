@@ -49,7 +49,6 @@ module.exports = async (ctx) => {
       userName: personId
     };
   } catch (e) {
-    console.log(e.message);
     ctx.body = e;
   }
 }
