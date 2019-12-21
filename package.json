@@ -2,7 +2,7 @@
   "name": "smart-shop",
   "version": "1.0.0",
   "description": "基于腾讯云人脸识别的智慧零售服务小demo",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "mocha ./test --timeout 10000 --reporter mochawesome --exit"
