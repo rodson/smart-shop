@@ -2,8 +2,8 @@ const fs = require('fs');
 const iaiClient = require('../iaiClient');
 const assert = require('assert');
 
-const groupName = 'group-vip';
-const groupId = 'group-vip';
+const groupName = 'group-viptest';
+const groupId = 'group-viptest';
 const personId = 'vip-person1';
 const personName = 'vip-person1';
 const person1Img = base64_encode('images/curry.jpg');
