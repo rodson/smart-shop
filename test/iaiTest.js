@@ -19,12 +19,12 @@ describe('腾讯云人脸识别用例', function() {
 
   it('添加人员，返回FaceId', async () => {
     const response = await iaiClient.CreatePerson({ image: person1Img, personId, personName, groupId });
-    assert.ok(response.FaceId !== undefined);
+    assert.ok(response.FaceId !== undefined, `requestId: ${response.RequestId}`);
   });
 
-  it('人脸搜索，返回', async () => {
+  it('人脸搜索，返回搜索candidate', async () => {
     const response = await iaiClient.SearchFaces({ groupIds: [groupId], image: person1Img });
-    assert.ok(response.Results.length > 0);
+    assert.ok(response.Results[0].Candidates.length > 0, `requestId: ${response.RequestId}`);
   });
 });
 

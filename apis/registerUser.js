@@ -1,15 +1,17 @@
 const iaiClient = require('../iaiClient');
+const uuid = require('uuid/v4');
 
 module.exports = async (ctx) => {
+  const { image, personName } = ctx.request.body;
   try {
     const response = await iaiClient.CreatePerson({ 
-      groupId: 'aaaa' + Date.now(),
-      groupName: 'aaaa' + Date.now()
+      groupId: 'group-vip',
+      personId: uuid(),
+      personName,
+      image
     });
-    console.log(response);
-    ctx.body = 'success';
+    ctx.body = response;
   } catch (e) {
-    console.log(response);
-    ctx.body = 'error';
+    ctx.body = e;
   }
 }

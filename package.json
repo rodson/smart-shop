@@ -20,8 +20,11 @@
   "homepage": "https://github.com/rodson/smart-shop#readme",
   "dependencies": {
     "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
-    "tencentcloud-sdk-nodejs": "^3.0.105"
+    "supertest": "^4.0.2",
+    "tencentcloud-sdk-nodejs": "^3.0.105",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "mocha": "^6.2.2",

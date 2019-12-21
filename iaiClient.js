@@ -19,7 +19,7 @@ let client = new IaiClient(cred);
  * @param {String} groupName
  */
 function CreateGroup({ groupId, groupName }) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = new models.CreateGroupRequest();
     req.GroupId = groupId;
     req.GroupName = groupName
@@ -27,7 +27,7 @@ function CreateGroup({ groupId, groupName }) {
 
     client.CreateGroup(req, (errMsg, response) => {
         if (errMsg) {
-            reject(errMsg);
+            resolve(errMsg);
             return;
         }
         resolve(response);
@@ -36,7 +36,7 @@ function CreateGroup({ groupId, groupName }) {
 }
 
 function CreatePerson({ image, personId, personName, groupId }) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = new models.CreatePersonRequest();
     req.PersonId = personId;
     req.PersonName = personName;
@@ -45,7 +45,7 @@ function CreatePerson({ image, personId, personName, groupId }) {
 
     client.CreatePerson(req, (errMsg, response) => {
       if (errMsg) {
-        reject(errMsg);
+        resolve(errMsg);
         return;
       }
       resolve(response);
@@ -54,35 +54,37 @@ function CreatePerson({ image, personId, personName, groupId }) {
 }
 
 function SearchFaces({ groupIds, image }) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = new models.SearchFacesRequest();
     req.GroupIds = groupIds;
     req.Image = image;
     req.MaxFaceNum = 1;  // 只检测输入图的最大脸
     req.MaxPersonNum = 1; // 只返回最相似的Person
+    req.FaceMatchThreshold = 80;
+    req.NeedPersonInfo = 1;
 
     client.SearchFaces(req, (errMsg, response) => {
       if (errMsg) {
-        reject(errMsg);
+        resolve(errMsg);
         return;
       }
-      resolve(response) 
-    }); 
+      resolve(response)
+    });
   });
 }
 
 function DeleteGroup({ groupId }) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = new models.DeleteGroupRequest();
     req.GroupId = groupId;
 
     client.DeleteGroup(req, (errMsg, response) => {
       if (errMsg) {
-        reject(errMsg);
+        resolve(errMsg);
         return;
       }
-      resolve(response) 
-    }); 
+      resolve(response)
+    });
   });
 }
 
