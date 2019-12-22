@@ -34,7 +34,7 @@ describe('服务api测试用例', () => {
    });
   });
 
-  it('curry注册VIP，返回成功', (done) => {
+  it('客户1注册VIP，返回成功', (done) => {
     request
       .post('/registerUser')
       .send({ image: personVIPImg, personName: 'curry' })
@@ -44,7 +44,7 @@ describe('服务api测试用例', () => {
       })
   });
 
-  it('vip客户curry进店，判断客户类型，返回curry，类型VIP', (done) => {
+  it('客户1进店，判断客户类型，返回客户1名称，类型VIP', (done) => {
     request
       .post('/getUserInfo')
       .send({ image: personVIPImg })
@@ -55,7 +55,7 @@ describe('服务api测试用例', () => {
       });
   });
 
-  it('新客户iverson进店，判断客户类型，返回类型为新客户', (done) => {
+  it('新客户2进店，判断客户类型，返回类型为新客户', (done) => {
     request
       .post('/getUserInfo')
       .send({ image: personNormalImg })
@@ -65,7 +65,7 @@ describe('服务api测试用例', () => {
       });
   });
 
-  it('iverson再次进店，判断客户类型，返回类型为回头客', (done) => {
+  it('新客户2再次进店，判断客户类型，返回类型为回头客', (done) => {
     request
       .post('/getUserInfo')
       .send({ image: personNormalImg })
