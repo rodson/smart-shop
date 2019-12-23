@@ -5,15 +5,13 @@
 
 实现客户身份自动识别
 
-示意图
 ![示意图](http://p.qpic.cn/zc_pic/0/01c51f34705259fdc079839103e2ad4b15771007596651/0)
 
-架构简介
-![架构简介](http://p.qpic.cn/zc_pic/0/01c51f34705259fdc079839103e2ad4b15771007596651/0)
+![架构简介](http://p.qpic.cn/zc_pic/0/3347f39b8e4a0c1dc94f9d9909c618ac15771007418423/0)
 
 
 ## 相关资料
-* [人脸识别智慧零售场景从零开发](https://cloud.tencent.com/document/product/867/32769)
+* [人脸识别智慧零售场景从零开发](https://cloud.tencent.com/developer/article/1558384)
 * [腾讯云人脸识别文档](https://cloud.tencent.com/document/product/867/32769)
 * [腾讯云人脸识别控制台](https://console.cloud.tencent.com/aiface)
 * [腾讯云SDK](https://github.com/TencentCloud)
