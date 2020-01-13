@@ -11,7 +11,7 @@
 
 
 ## 相关资料
-* [人脸识别智慧零售场景从零开发](https://cloud.tencent.com/developer/article/1558384)
+* [人脸识别智慧零售场景从零开发](https://cloud.tencent.com/developer/article/1564814)
 * [腾讯云人脸识别文档](https://cloud.tencent.com/document/product/867/32769)
 * [腾讯云人脸识别控制台](https://console.cloud.tencent.com/aiface)
 * [腾讯云SDK](https://github.com/TencentCloud)
